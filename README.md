@@ -13,4 +13,10 @@ Cookie nk = new Cookie("shopList", "value");
 ShopServlet is accessed by /shopUpdate  
 
 After adding to card user click Buy! button which is
-action="buy" method="post"
+action="buy" method="post";
+
+New updates: 
+You need to register firstly, then log in.
+Logining data will be available for 30 minutes.
+During 30 minutes you cannot go to login.jsp, because it will redirect you to shop.jsp page.
+
