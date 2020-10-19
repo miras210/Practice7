@@ -37,7 +37,7 @@
     </script>
 </head>
 <body>
-<form action="buy" method="post">
+<form action="buy.jsp" method="post">
     <input type="submit" value="Buy!">
 </form>
     <div class="shop">
