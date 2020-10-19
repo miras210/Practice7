@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getSession().setAttribute("count", 1);
         Cookie[] ck = request.getCookies();
         String username = "", password = "";
         for (Cookie c:ck) {

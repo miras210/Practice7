@@ -12,6 +12,10 @@
 </head>
 <body>
 <%
+    if (request.getSession().getAttribute("count") != null) {
+        int count = (int) request.getSession().getAttribute("count") + 1;
+        request.getSession().setAttribute("count", count);
+    }
     Cookie[] ck = request.getCookies();
     Boolean here = false;
     for (Cookie c:ck) {

@@ -28,6 +28,7 @@
         }
         Date d = new Date(request.getSession().getCreationTime());
         Date l = new Date(request.getSession().getLastAccessedTime());
+        int count = (int) session.getAttribute("count");
     %>
     <br>
     <h3>Session creation time:</h3>
@@ -35,6 +36,9 @@
     <br>
     <h3>Last activity time:</h3>
     <%=l%>
+    <br><br>
+    <h3>Number of website visits:</h3>
+    <%=count%>
     <br><br>
     <form method="post" action="main.jsp">
         <input type="submit" value="Confirm">
