@@ -1,4 +1,5 @@
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Date" %><%--
   Created by IntelliJ IDEA.
   User: Miras
   Date: 18.10.2020
@@ -15,15 +16,26 @@
     <h3>There are your list of purchases:</h3>
     <%
         ArrayList<String> shopList = (ArrayList<String>) request.getSession().getAttribute("list");
+        if (shopList != null) {
         for (String item: shopList) {
             %>
         <div>
             <%=item%>
         </div>
     <%
+            }
+        session.setAttribute("list", new ArrayList<String>());
         }
+        Date d = new Date(request.getSession().getCreationTime());
+        Date l = new Date(request.getSession().getLastAccessedTime());
     %>
     <br>
+    <h3>Session creation time:</h3>
+    <%=d%>
+    <br>
+    <h3>Last activity time:</h3>
+    <%=l%>
+    <br><br>
     <form method="post" action="main.jsp">
         <input type="submit" value="Confirm">
     </form>
