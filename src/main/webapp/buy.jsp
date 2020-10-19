@@ -40,7 +40,7 @@
     <h3>Number of website visits:</h3>
     <%=count%>
     <br><br>
-    <form method="post" action="main.jsp">
+    <form method="post" action="login.jsp">
         <input type="submit" value="Confirm">
     </form>
 </body>
